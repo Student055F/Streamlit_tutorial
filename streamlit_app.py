@@ -7,6 +7,8 @@ import base64
 np.bool = np.bool_
 np.object = object
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 @st.cache(suppress_st_warning=True)
 def get_fvalue(val):
     feature_dict = {"No":1, "Yes":2}
