@@ -7,7 +7,7 @@ import base64
 np.bool = np.bool_
 np.object = object
 
-@st.cache_data(suppress_st_warning=True)
+@st.cache_data()
 def get_fvalue(val):
     feature_dict = {"No":1, "Yes":2}
     for key,value in feature_dict.items():
@@ -106,5 +106,4 @@ elif app_mode == 'Prediction':
         elif prediction[0] == 1 :
             st.success('Congratulations!! you will get the loan from Bank')
             st.markdown(f'<img src="data:image/gif;base64,{data_url}" alt="cat gif">', unsafe_allow_html=True)
-
 
