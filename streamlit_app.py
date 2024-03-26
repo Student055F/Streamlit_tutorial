@@ -9,7 +9,7 @@ np.object = object
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-@st.cache_data()
+@st.cache
 def get_fvalue(val):
     feature_dict = {"No":1, "Yes":2}
     for key,value in feature_dict.items():
